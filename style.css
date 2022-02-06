@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');/**Import de fonts diferentes*/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');/**Import de Icons diferentes*/
+
 *{/**Asterisco aplica à todas as imagens da página*/
     margin: 0;/**retira as margens de todos os elementos do site*/
     padding: 0;
@@ -11,6 +12,10 @@
     --font-primary: "Baloo Da 2", serif;
     --font-secundary: "Josefin Slab 2", serif;
     --font-action: "Muli", serif;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .hamburguer{/**Menu hamburguer*/
@@ -178,6 +183,7 @@ header{
     top: 0;
     right: -20rem;/**Joga o menu fora da tela*/
     transition: all 1s;/*Coloca animação na entra/saida do menu lateral*/
+    z-index: 100;
 }
 
 .show-menu .sidebar{
@@ -489,7 +495,7 @@ header{
     transition: 1.3s;
 }
 
-.field:focus - label{
+.field:focus label{
     top: 3;
     font-size: 1rem;
 }
@@ -570,4 +576,52 @@ header{
     padding: 1rem;
     cursor: pointer;
     grid-column: 2;
+}
+
+footer{
+    width: 100%;
+    height: 10rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;/*Alinha na vertical*/
+    align-items: center;/*Alinha na horizontal*/    
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;/*Coloca espaço entre eles*/
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;/*Espaçamento entre os ícones*/
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display: flex;/*Coloca os ícones em linha*/
+}
+
+#link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #6a3093;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #a044ff, #6a3093);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.6rem #00000009;
 }
